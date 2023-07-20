@@ -65,3 +65,9 @@ body {
     opacity: 1;
     transition: .2s ease-out
 }
+
+@media (max-width: 420px) {
+    .main__img {
+        max-width: 310px;
+    }
+}
