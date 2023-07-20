@@ -1,4 +1,5 @@
 const mainImg = document.querySelectorAll('.main__img-item');
+const buttonUp = document.querySelector('.button-up');
 
 window.addEventListener('scroll', e => {
     const scrolled = document.documentElement.scrollTop / 10;
@@ -10,7 +11,20 @@ window.addEventListener('scroll', e => {
         }
     }
 
-    //console.log(scrolled)
+    const offsetY = document.documentElement.scrollTop
+    if (Math.floor(offsetY) >= 500) {
+        buttonUp.classList.add('active')
+    } else {
+        buttonUp.classList.remove('active')
+    }
+        
+    console.log(Math.floor(offsetY));
+});
 
+buttonUp.addEventListener('click', event => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+         })
 });
 

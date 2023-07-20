@@ -21,6 +21,7 @@ body {
 }
 
 .main {
+    position: relative;
 }
 
 .main__img {
@@ -41,4 +42,25 @@ body {
     transition: .2s ease-out;
     scale: 1.7;
     bottom: 50px;
+}
+
+.button-up {
+    visibility: hidden;
+    opacity: 0;
+
+    text-transform: uppercase;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: azure;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    transition: .2s ease-out
+}
+
+.button-up.active {
+    visibility: visible;
+    opacity: 1;
+    transition: .2s ease-out
 }
